@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 " --- Vundle ---
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -6,11 +9,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
+Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'L9'
@@ -19,23 +18,37 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'Yggdroot/indentLine' 
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'klen/python-mode'
+Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'ervandew/supertab' " conflict with YCM
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 " --- Vundle end ---
+
+"set list listchars=tab:›-,trail:-,precedes:<,extends:>,eol:¬
+
+" indent-guide setting
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_color_change_percent = 15
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+let g:indent_guides_space_guides = 1
+let g:indent_guides_guide_size = 1
+
+syntax on
+set smartcase
+set ruler
+set backspace=2
+set cc=+1
+"set relativenumber
+
+" specify python path to YCM
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python2'
 
 
 " Swap :,; in normal mode
@@ -72,11 +85,15 @@ nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 
-syntax on
-filetype plugin indent on
 
-set t_Co=256
+"let g:indentLine_color_term = 3
+"let g:indentLine_color_tty_light = 7
+"let g:indentLine_color_tty_dark = 1
+
+
+set background=dark
 colorscheme wombat256mod
+set t_Co=256 
 
 set wildmenu
 set wildmode=longest:full
@@ -85,14 +102,14 @@ set number
 set mouse=a
 set ignorecase
 
-set autoindent
-filetype indent on
+"set autoindent
+"filetype indent on
 
-"setting tab as 4 chars instead of default 8
+" use 4 spaces for tabs
 set expandtab
+set tabstop=4 
+set softtabstop=4 
 set shiftwidth=4
-set tabstop=4
-set sts=4
 
 "uncomment to let *.c, *.cpp to have smaller tabs
 "autocmd Filetype c,cpp setlocal ts=3 sts=3 sw=3
