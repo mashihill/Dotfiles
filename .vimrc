@@ -21,9 +21,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 "Plugin 'Yggdroot/indentLine' 
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'klen/python-mode'
+"Plugin 'klen/python-mode'
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'ervandew/supertab' " conflict with YCM
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,6 +33,17 @@ filetype plugin indent on    " required
 " --- Vundle end ---
 
 "set list listchars=tab:›-,trail:-,precedes:<,extends:>,eol:¬
+
+" UtilSnip
+" Trigger configuration. 
+" Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:ycm_use_ultisnips_completer = 1
+
+" Solving problem for YCM + ultisnip + supertab
+let g:ycm_key_list_select_completion = ["<c-tab>", "<Down>"]
+let g:ycm_key_list_previous_completion = ["<c-s-tab>", "<Up>"]
+let g:SuperTabDefaultCompletionType = "<C-Tab>"
+
 
 " indent-guide setting
 let g:indent_guides_enable_on_vim_startup = 1
