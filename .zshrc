@@ -75,7 +75,7 @@ plugins=(autojump)
 
 source $ZSH/oh-my-zsh.sh
 alias ls='ls -FG'
-#source /Users/Keene/zsh-git-prompt/zshrc.sh
+source /Users/Keene/zsh-git-prompt/zshrc.sh
 #PROMPT='%B%m%~%b$(git_super_status) %# '
 
 # User configuration
