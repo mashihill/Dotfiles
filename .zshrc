@@ -1,9 +1,12 @@
-alias ls='ls -F '
 alias ll='ls -al'
 alias qq='exit'
 alias vi='vim'
+alias gs='git status -uno'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Python
 eval "$(pyenv init -)"
@@ -24,8 +27,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="avit"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="avit"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -71,7 +74,9 @@ plugins=(git-prompt)
 plugins=(autojump)
 
 source $ZSH/oh-my-zsh.sh
+alias ls='ls -FG'
 #source /Users/Keene/zsh-git-prompt/zshrc.sh
+#PROMPT='%B%m%~%b$(git_super_status) %# '
 
 # User configuration
 
