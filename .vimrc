@@ -5,7 +5,6 @@ set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -32,6 +31,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " --- Vundle end ---
 
+" Ugly ... TODO
 "set list listchars=tab:›-,trail:-,precedes:<,extends:>,eol:¬
 
 " UtilSnip
@@ -98,12 +98,6 @@ nnoremap <leader>6 6gt
 nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
-
-
-"let g:indentLine_color_term = 3
-"let g:indentLine_color_tty_light = 7
-"let g:indentLine_color_tty_dark = 1
-
 
 set background=dark
 colorscheme wombat256mod
