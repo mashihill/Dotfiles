@@ -2,6 +2,7 @@ alias ll='ls -al'
 alias qq='exit'
 alias vi='vim'
 alias gs='git status -uno'
+alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
