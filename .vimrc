@@ -26,6 +26,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab' 
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,6 +40,7 @@ filetype plugin indent on    " required
 " Trigger configuration. 
 " Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:ycm_use_ultisnips_completer = 1
+"
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
