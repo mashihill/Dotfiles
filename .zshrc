@@ -115,3 +115,9 @@ export PATH="$PATH:/opt/X11/bin:/usr/local/git/bin:/usr/texbin"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/Keene/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/Keene/google-cloud-sdk/completion.zsh.inc'
