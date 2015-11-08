@@ -2,12 +2,17 @@ alias ll='ls -al'
 alias qq='exit'
 alias vi='vim'
 alias gs='git status -uno'
+alias gsu='git status -u'
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export PATH=/usr/local/mysql/bin:$PATH
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Python
 eval "$(pyenv init -)"
@@ -19,6 +24,9 @@ export PIP_RESPECT_VIRTUALENV=true
 source ~/.profile
 source /Users/Keene/.rvm/scripts/rvm
 # ----
+
+# Django Shell Completion
+source ~/Codework/django_bash_completion
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -85,8 +93,9 @@ alias ls='ls -FG'
 
 # User configuration
 
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH="$PATH:/opt/X11/bin:/usr/local/git/bin:/usr/texbin"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/git/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

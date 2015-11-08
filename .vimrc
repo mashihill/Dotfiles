@@ -27,6 +27,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'ervandew/supertab' 
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'git://github.com/altercation/vim-colors-solarized.git'
+"Plugin 'hdima/python-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,6 +43,7 @@ filetype plugin indent on    " required
 " Trigger configuration. 
 " Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:ycm_use_ultisnips_completer = 1
+"
 "
 
 " CtrlP
@@ -63,7 +67,10 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 let g:indent_guides_space_guides = 1
 let g:indent_guides_guide_size = 1
 
-syntax on
+let python_highlight_all = 1
+let OPTION_NAME = 1
+
+syntax enable
 set smartcase
 set ruler
 set backspace=2
@@ -73,6 +80,11 @@ set cc=+1
 " specify python path to YCM
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python2'
 
+" RainbowParentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Swap :,; in normal mode
 no ; :
@@ -108,9 +120,10 @@ nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 
-set background=dark
-colorscheme wombat256mod
 set t_Co=256 
+set background=dark
+"colorscheme molokai
+colorscheme wombat256mod
 
 set wildmenu
 set wildmode=longest:full
